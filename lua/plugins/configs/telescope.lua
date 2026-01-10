@@ -22,7 +22,7 @@ telescope.setup{
 local builtin = require("telescope.builtin")
 local map = vim.keymap.set
 
-map('n', '<leader>ff', builtin.find_files, { desc = "Find files" })
+map('n', '<leader>fp', builtin.find_files, { desc = "Find files" })
 map('n', '<leader>fg', builtin.live_grep, { desc = "Search in project" })
 map('n', '<leader>fb', builtin.current_buffer_fuzzy_find, { desc = "Search in buffer" })
 map('n', '<leader>fs', builtin.lsp_document_symbols, { desc = "Search symbols in file" })

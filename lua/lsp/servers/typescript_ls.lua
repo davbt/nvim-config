@@ -1,4 +1,4 @@
-local lspconfig = require('lspconfig')
+local lspconfig = require("lspconfig")
 
 lspconfig.ts_ls.setup({
     cmd = { "/opt/homebrew/bin/typescript-language-server", "--stdio" },

@@ -1,9 +1,11 @@
 local lspconfig = require("lspconfig")
+local pid = vim.fn.getpid()
 
-lspconfig.csharp_ls.setup{
-    cmd = { vim.fn.expand("~/.dotnet/tools/csharp-ls") },  -- full path to the installed tool
-    filetypes = { "cs" },
-    root_dir = lspconfig.util.root_pattern(".sln", ".csproj", ".git") or vim.fn.getcwd(),
-    settings = {},
-}
-
+lspconfig.omnisharp.setup({
+    cmd = { "dotnet", "/opt/omnisharp/OmniSharp.dll", "--languageserver", "--hostPID", tostring(pid) },
+    handlers = {
+        ["textDocument/definition"] = require('omnisharp_extended').definition_handler,
+        ["textDocument/typeDefinition"] = require('omnisharp_extended').type_definition_handler,
+        ["textDocument/implementation"] = require('omnisharp_extended').implementation_handler,
+    },
+})
