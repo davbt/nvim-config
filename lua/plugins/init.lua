@@ -23,4 +23,5 @@ require("plugins.configs.treesitter")
 require("plugins.configs.telescope")
 require("plugins.configs.yazi")
 require("plugins.configs.blink")
+require("plugins.configs.catppuccin")
 
