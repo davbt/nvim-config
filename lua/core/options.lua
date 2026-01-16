@@ -8,4 +8,6 @@ vim.opt.modeline = false
 vim.opt.foldmethod = "indent" -- Fold by indent
 vim.opt.foldlevelstart = 99  -- Start with all folds open
 vim.opt.termguicolors = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
