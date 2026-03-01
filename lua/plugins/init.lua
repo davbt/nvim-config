@@ -17,6 +17,7 @@ load_plugin("lazygit.nvim")
 load_plugin("LuaSnip")
 load_plugin("blink.cmp")
 load_plugin("omnisharp-extended-lsp.nvim")
+load_plugin("lexima.vim")
 
 -- Load plugin configs
 require("plugins.configs.treesitter")
