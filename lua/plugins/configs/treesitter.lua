@@ -9,6 +9,6 @@ vim.opt.rtp:append(parser_path)
 require("nvim-treesitter.configs").setup {
     ensure_installed = { "c", "cpp", "python", "java", "c_sharp", "javascript", "typescript", "kotlin" },
     highlight = { enable = true },
-    indent = { enable = true },
+    -- indent = { enable = true },
 }
 

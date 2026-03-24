@@ -5,6 +5,7 @@ require("lsp.servers.lua_ls")
 require("lsp.servers.marksman")
 require("lsp.servers.typescript_ls")
 require("lsp.servers.javascript_ls")
+require("lsp.servers.rust_ls")
 
 vim.diagnostic.config({
   virtual_text = false,   -- Disable inline diagnostics

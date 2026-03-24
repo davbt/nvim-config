@@ -10,4 +10,6 @@ vim.opt.foldlevelstart = 99  -- Start with all folds open
 vim.opt.termguicolors = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
 
