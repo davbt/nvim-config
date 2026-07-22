@@ -3,7 +3,7 @@ vim.keymap.set("n", "<leader>w", ":w<CR>")
 
 local map = vim.keymap.set
 
--- map('n', 'gd', vim.lsp.buf.definition, { desc = "Go to definition" })
+map('n', 'gd', vim.lsp.buf.definition, { desc = "Go to definition" })
 -- map('n', 'gD', vim.lsp.buf.declaration, { desc = "Go to declaration" })
 -- map('n', '<leader>di', vim.lsp.buf.implementation, { desc = "Go to implementation" })
 map('n', 'gr', function()
@@ -37,4 +37,5 @@ map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
-vim.keymap.set("i", "jk", "<Esc>", { noremap = true, silent = true })
+map("n", "<Esc>", "<cmd>nohlsearch<CR>")
+

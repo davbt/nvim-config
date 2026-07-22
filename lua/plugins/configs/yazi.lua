@@ -5,7 +5,7 @@ if not ok then
 end
 
 yazi.setup({
-    open_for_directories = true,
+    open_for_directories = false,
 })
 
 local map = vim.keymap.set

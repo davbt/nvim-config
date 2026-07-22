@@ -13,7 +13,8 @@ telescope.setup{
       '--with-filename',
       '--line-number',
       '--column',
-      '--smart-case'
+      '--smart-case',
+      '--no-ignore',
     },
   }
 }
@@ -22,9 +23,25 @@ telescope.setup{
 local builtin = require("telescope.builtin")
 local map = vim.keymap.set
 
-map('n', '<leader>fp', builtin.find_files, { desc = "Find files" })
-map('n', '<leader>fg', builtin.live_grep, { desc = "Search in project" })
-map('n', '<leader>fb', builtin.current_buffer_fuzzy_find, { desc = "Search in buffer" })
+map('n', '<leader>fp',
+    function()
+      builtin.find_files({
+        no_ignore = true,
+        path_display = {"truncate"},
+      })
+    end,
+    { desc = "Find files" }
+)
+map('n', '<leader>fg',
+    function()
+      builtin.live_grep({
+        path_display = {"truncate"},
+      })
+    end,
+    { desc = "Search in project" }
+)
+-- map('n', '<leader>fb', builtin.current_buffer_fuzzy_find, { desc = "Search in buffer" })
 map('n', '<leader>fs', builtin.lsp_document_symbols, { desc = "Search symbols in file" })
 map('n', '<leader>fc', builtin.commands, { desc = "Search commands" })
+map('n', '<leader>fm', "<cmd>Telescope keymaps<cr>", { desc = "Search keymaps" })
 

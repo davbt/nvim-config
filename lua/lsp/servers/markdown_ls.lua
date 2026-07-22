@@ -1,3 +1,3 @@
 local lspconfig = require("lspconfig")
-lspconfig.marksman.setup({})
+lspconfig.markdown_oxide.setup({})
 
